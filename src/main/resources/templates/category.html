@@ -1,0 +1,60 @@
+<head th:replace="fragments/base :: head"></head>
+<div th:replace="fragments/base :: menu"></div>
+
+<div class="text-left px-0 py-0">
+  <h5 class="bg-dark text-white px-4 py-2">Category / <a th:href="@{'/roadsign'}">Roadsign</a></h5>
+  <div class="text-center alert alert-primary" th:if="${message != null}">[[${message}]]</div>
+</div>
+
+<nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    <li class="page-item link"><a class="page-link" th:if="${currentPage > 1}" th:href="@{'/category/page/' + ${currentPage - 1 } + '?column=' + ${column} + '&order=' + ${order} }" th:text="Prev"></a></li>
+    <li class="page-item disabled"><a class="page-link" th:unless="${currentPage > 1}" th:text="Prev"></a></li>
+
+    <li class="page-item" th:each="i: ${#numbers.sequence(1, totalPages)}">
+      <a class="page-link" th:if="${currentPage != i}" th:href="@{'/category/page/' + ${i}} + '?column=' + ${column} + '&order=' + ${order}">[[${i}]]</a>
+      <a class="page-link active" th:if="${currentPage == i}">[[${i}]]</a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" th:if="${currentPage < totalPages}" th:href="@{'/category/page/' + ${currentPage + 1 } + '?column=' + ${column} + '&order=' + ${order} }">Next</a>
+      <a class="page-link disabled" th:unless="${currentPage < totalPages}">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="text-center bg-dark text-white">
+      <th><a class="table-header" th:href="@{'/category/page/' + ${currentPage} + '?column=id&order=' + ${reverseOrder}}">ID</a></th>
+      <th><a class="table-header" th:href="@{'/category/page/' + ${currentPage} + '?column=name&order=' + ${reverseOrder}}">Name</a></th>
+      <th><a class="table-header" th:href="@{'/category/page/' + ${currentPage} + '?column=description&order=' + ${reverseOrder}}">Description</a></th>
+      <th style="text-align: center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <form action="/category/create" method="post">
+        <td style="text-align: center"><i class="fa-solid fa-plus"></i></td>
+        <td><input class="form-control form-control-sm" type="text" name="name" /></td>
+        <td><input class="form-control form-control-sm" type="text" name="description" /></td>
+        <td style="text-align: center">
+          <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa-solid fa-file"></i></button>
+        </td>
+      </form>
+    </tr>
+
+    <tr th:each="category: ${categories}">
+      <form action="/category/mode" method="post">
+        <td style="text-align: center">[[${category.id}]]<input type="hidden" name="id" th:value="${category.id}" /></td>
+        <td><input class="form-control form-control-sm" type="text" name="name" th:value="${category.name}" /></td>
+        <td><input class="form-control form-control-sm" type="text" name="description" th:value="${category.description}" /></td>
+        <td style="text-align: center">
+          <button class="btn btn-outline-primary btn-sm" name="type" value="edit" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+          <button class="btn btn-outline-primary btn-sm" name="type" value="delete" type="submit"><i class="fa-solid fa-trash"></i></button>
+        </td>
+      </form>
+    </tr>
+  </tbody>
+</table>
+
