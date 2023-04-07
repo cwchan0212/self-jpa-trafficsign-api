@@ -1,5 +1,6 @@
 com\project\roadsign\controller\RoadsignRestController.class
 com\project\roadsign\exception\RoadsignNotFoundException.class
+com\project\roadsign\config\SpringdocConfig.class
 com\project\roadsign\controller\CategoryConsumeController.class
 com\project\roadsign\config\InitialDataLoader.class
 com\project\roadsign\service\CategoryService.class
@@ -7,6 +8,7 @@ com\project\roadsign\entity\Roadsign.class
 com\project\roadsign\repository\CategoryRepository.class
 com\project\roadsign\controller\RoadsignController.class
 com\project\roadsign\service\RoadsignService.class
+com\project\roadsign\controller\ApiOperation.class
 com\project\roadsign\service\RoadsignServiceImp.class
 com\project\roadsign\controller\CategoryRestController.class
 com\project\roadsign\exception\CategoryNotFoundException.class

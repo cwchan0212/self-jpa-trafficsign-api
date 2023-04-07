@@ -8,7 +8,6 @@ import com.project.roadsign.repository.RoadsignRepository;
 
 import jakarta.annotation.PostConstruct;
 
-
 @Configuration
 public class InitialDataLoader {
     

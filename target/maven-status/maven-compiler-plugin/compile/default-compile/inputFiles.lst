@@ -9,9 +9,11 @@ C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\controller\Cat
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\repository\CategoryRepository.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\entity\Category.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\service\RoadsignService.java
+C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\controller\ApiOperation.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\controller\CategoryConsumeController.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\exception\CategoryNotFoundException.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\service\CategoryServiceImp.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\controller\RoadsignRestController.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\config\InitialDataLoader.java
 C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\entity\Roadsign.java
+C:\Users\user\Desktop\roadsign\src\main\java\com\project\roadsign\config\SpringdocConfig.java

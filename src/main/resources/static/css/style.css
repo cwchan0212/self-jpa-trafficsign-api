@@ -4,6 +4,9 @@ a:visited {
   text-decoration: none;
 }
 
+.nav-link {
+  color: #000;
+}
 ul > li {
   font-size: larger;
   font-weight: bold;

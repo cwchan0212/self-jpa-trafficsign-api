@@ -95,7 +95,4 @@ public class Category {
     // public void setRoadsigns(List<Roadsign> roadsigns) {
     //     this.roadsigns = roadsigns;
     // }  
-      
-
-    
 }
