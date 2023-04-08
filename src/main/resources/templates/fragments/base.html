@@ -1,33 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head th:fragment="head">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UK Traffic Signs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css" integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js"></script>
-  </head>
-  <body>
-    <div class="container px-2 py-2 d-flex justify-content-center" th:fragment="menu">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/category"><i class="fa-solid fa-key"></i> Rest API</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/swagger-ui/index.html" target="_blank"> <i class="fa-solid fa-book"></i> Swagger</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.postman.com/" target="_blank"><i class="fa-solid fa-envelopes-bulk"></i> Postman</a>
-        </li>
-      </ul>
-    </div>
-  </body>
+
+<head th:fragment="head">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK Traffic Signs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+    integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+
+  <div class="container px-2 py-2 d-flex justify-content-center" th:fragment="menu">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/category"><i class="fa-solid fa-key"></i> REST API</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.postman.com/" target="_blank"><i class="fa-solid fa-envelopes-bulk"></i> Postman</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/swagger-ui/index.html" target="_blank"> <i class="fa-solid fa-book"></i> Swagger</a>
+      </li>
+    </ul>
+  </div>
+
+</body>
+
 </html>

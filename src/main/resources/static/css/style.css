@@ -32,7 +32,7 @@ ul > li {
   vertical-align: middle;
 }
 
-.roadsign {
+.trafficsign {
   display: flex;
   align-items: center;
   position: relative;
@@ -60,7 +60,7 @@ ul > li {
   background-color: white;
 }
 
-.roadsign:hover .overlay {
+.trafficsign:hover .overlay {
   opacity: 1;
 }
 

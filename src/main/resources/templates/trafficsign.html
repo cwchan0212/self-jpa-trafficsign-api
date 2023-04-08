@@ -1,0 +1,77 @@
+<head th:replace="fragments/base :: head"></head>
+<div th:replace="fragments/base :: menu"></div>
+
+<div class="text-left px-0 py-0">
+  <h5 class="bg-dark text-white px-4 py-2"><a th:href="@{'/category'}"> Category</a> / Traffic Sign</h3>
+  <div class="text-center alert alert-primary" th:if="${message != null}">[[${message}]]</div>
+</div>
+
+<nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    <li class="page-item link"><a class="page-link" th:if="${currentPage > 1}" th:href="@{'/trafficsign/page/' + ${currentPage - 1 } + '?column=' + ${column} + '&order=' + ${order} }" th:text="Prev"></a></li>
+    <li class="page-item disabled"><a class="page-link" th:unless="${currentPage > 1}" th:text="Prev"></a></li>
+
+    <li class="page-item" th:each="i: ${#numbers.sequence(1, totalPages)}">
+      <a class="page-link" th:if="${currentPage != i}" th:href="@{'/trafficsign/page/' + ${i}} + '?column=' + ${column} + '&order=' + ${order}">[[${i}]]</a>
+      <a class="page-link active" th:if="${currentPage == i}">[[${i}]]</a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" th:if="${currentPage < totalPages}" th:href="@{'/trafficsign/page/' + ${currentPage + 1 } + '?column=' + ${column} + '&order=' + ${order} }">Next</a>
+      <a class="page-link disabled" th:unless="${currentPage < totalPages}">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="text-center bg-dark text-white">
+      <th><a class="table-header" th:href="@{'/trafficsign/page/' + ${currentPage} + '?column=id&order=' + ${reverseOrder}}">ID</a></th>
+      <th><a class="table-header" th:href="@{'/trafficsign/page/' + ${currentPage} + '?column=category&order=' + ${reverseOrder}}">Category</a></th>
+      <th><a class="table-header" th:href="@{'/trafficsign/page/' + ${currentPage} + '?column=text&order=' + ${reverseOrder}}">Text</a></th>
+      <th><a class="table-header" th:href="@{'/trafficsign/page/' + ${currentPage} + '?column=filename&order=' + ${reverseOrder}}">Filename</a></th>
+      <th><a class="table-header" th:href="@{'/trafficsign/page/' + ${currentPage} + '?column=image&order=' + ${reverseOrder}}">Image</a></th>
+      <th style="text-align: center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <form action="/trafficsign/create" method="post">
+      <td style="text-align: center"><i class="fa-solid fa-plus"></i></td>
+      <td>
+        <select class="form-control form-control-sm" name="categoryId">
+          <option th:each="category: ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+        </select>
+      </td>
+      <td><input class="form-control form-control-sm" type="text" name="text" /></td>
+      <td><input class="form-control form-control-sm" type="text" name="filename" /></td>
+      <td><input class="form-control form-control-sm" type="text" name="image" /></td>
+      <td style="text-align: center">
+        <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa-solid fa-file"></i></button>
+      </td>
+    </form>
+
+    <tr th:each="trafficsign: ${trafficsigns}">
+      <form action="/trafficsign/mode" method="post">
+        <td style="text-align: center">[[${trafficsign.id}]]<input type="hidden" name="id" th:value="${trafficsign.id}" /></td>
+        <td>
+          <select class="form-control form-control-sm" name="categoryId">
+            <option th:each="category: ${categories}" th:value="${category.id}" th:text="${category.name}" th:selected="${category.id == trafficsign.category.id}"></option>
+          </select>
+        </td>
+        <td><input class="form-control form-control-sm" type="text" name="text" th:value="${trafficsign.text}" /></td>
+        <td><input class="form-control form-control-sm" type="text" name="filename" th:value="${trafficsign.filename}" /></td>
+        <td>
+          <input th:id="'preview-url-' + ${trafficsign.id}" class="form-control form-control-sm" type="text" name="image" th:value="${trafficsign.image}" />
+
+          <div class="image-preview">
+            <img src="#" alt="Image Preview" />
+          </div>
+        </td>
+        <td style="text-align: center">
+          <button class="btn btn-outline-primary btn-sm" name="type" value="edit" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+          <button class="btn btn-outline-primary btn-sm" name="type" value="delete" type="submit"><i class="fa-solid fa-trash"></i></button>
+        </td>
+      </form>
+    </tr>
+  </tbody>
+</table>

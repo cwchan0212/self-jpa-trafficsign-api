@@ -3,22 +3,28 @@
 
 <table class="table">
   <tr th:each="category: ${categories}">
-    <td class="bg-dark text-light px-4 py-2" colspan="5"><h5 th:text="${category.name}"></h5></td>
+    <td class="bg-dark text-light px-4 py-2" colspan="5">
+      <h5 th:text="${category.name}"></h5>
+    </td>
     <table class="table">
-      <th:block th:each="roadsign, roadsignStat : ${category.roadsigns}">
-        <th:block th:if="${roadsignStat.index % 5 == 0}"><tr></th:block>
+      <th:block th:each="trafficsign, trafficsignStat : ${category.trafficsigns}">
+        <th:block th:if="${trafficsignStat.index % 5 == 0}">
+          <tr>
+        </th:block>
         <td class="thead-light px-4 py-4" style="width:20%">
 
-          <div class="roadsign" th:id="'roadsign-' + ${roadsign.id}">
-            <img class="image" th:id="'image-' + ${roadsign.id}" th:src="${roadsign.image}">
-            <div class="overlay" th:id="'overlay-' + ${roadsign.id}">
-              <div class="text" th:id="'text-' + ${roadsign.id}" th:text="${roadsign.text}"></div>
+          <div class="trafficsign" th:id="'trafficsign-' + ${trafficsign.id}">
+            <img class="image" th:id="'image-' + ${trafficsign.id}" th:src="${trafficsign.image}">
+            <div class="overlay" th:id="'overlay-' + ${trafficsign.id}">
+              <div class="text" th:id="'text-' + ${trafficsign.id}" th:text="${trafficsign.text}"></div>
             </div>
-          </div>              
+          </div>
 
         </td>
-        <th:block th:if="${roadsignStat.index % 5 == 4}"></tr></th:block>
-      </th:block>
-    </table>
+        <th:block th:if="${trafficsignStat.index % 5 == 4}">
   </tr>
+  </th:block>
+  </th:block>
+</table>
+</tr>
 </table>

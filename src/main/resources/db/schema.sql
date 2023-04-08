@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS roadsign;
+DROP TABLE IF EXISTS trafficsign;
 DROP TABLE IF EXISTS category;
 
 CREATE TABLE category (
@@ -7,7 +7,7 @@ CREATE TABLE category (
   description VARCHAR(255)
 );
 
-CREATE TABLE roadsign (
+CREATE TABLE trafficsign (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
   text VARCHAR(500),
   filename VARCHAR(255),
