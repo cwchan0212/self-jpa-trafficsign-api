@@ -10,7 +10,7 @@ Welcome to the **UK Traffic Signs REST API**! This API is built using the **Java
 
 With this API, users can easily perform CRUD operations on both **categories** and **traffic signs**, and retrieve detailed information on each sign. The API is designed to be user-friendly and intuitive, with clear documentation provided by **Swagger**.
 
-Please note that the images used in this project are sourced from the <a href="https://www.gov.uk/guidance/the-highway-code/traffic-signs" target="_blank">Highcode Code of GOV.UK</a> and are for **educational purposes only**. 
+Please note that the images used in this project are sourced from the <a href="https://www.gov.uk/guidance/the-highway-code/traffic-signs" target="_blank">Highway Code of GOV.UK</a> and are for **educational purposes only**. 
 
 <p align="center">
   <img src="assets/images/01.png" width="600">
@@ -334,6 +334,6 @@ In the context of JPA (Java Persistence API), the following are some common func
 
 **Exception**: Represents a **specific error or problem** that can occur during the execution of a JPA-based application. Exceptions may be thrown by the repository, service, or controller layers, and can be handled by the web layer to return appropriate HTTP error codes and messages to the client.
 
-### Additional Resources
+### Credits
 - <a href="https://www.gov.uk/guidance/the-highway-code/traffic-signs" target="_blank">The Highway Code of GOV.UK</a>
 - <a href="https://www.highwaycodeuk.co.uk/signs-and-signals.html" target="_blank">Traffic Signs and Signals</a>
