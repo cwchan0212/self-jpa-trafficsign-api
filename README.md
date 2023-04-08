@@ -1,4 +1,4 @@
-## Side Project: UK Traffic Signs (Java Spring Boot REST API) 
+## Side Project: UK Traffic Signs REST API (Java Spring Boot framework) 
 <a href="https://6gg9.short.gy/9iqhry" target="_blank">:arrow_right: Preview</a>  
 
 [trafficsign.mp4](https://user-images.githubusercontent.com/7412075/230746373-58fbdbce-0a4f-4d1f-94bc-68ee0dbdd8f5.mp4
@@ -15,7 +15,7 @@ Please note that the images used in this project are sourced from the <a href="h
 <p align="center">
   <img src="assets/images/01.png" width="600">
 <br>
-<i>1. The overview of UK Traffic signs (Java Spring Boot REST API)</i></p>
+<i>1. The overview of UK Traffic Signs REST API</i></p>
 
 
 <p align="center">
