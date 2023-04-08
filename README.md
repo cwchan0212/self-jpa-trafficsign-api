@@ -6,7 +6,7 @@
 
 ### Introduction 
 
-Welcome to the **UK Traffic Signs REST API**! This API is built using the **Java Spring Boot Framework**, **H2** and **Swagger**, and provides a comprehensive database of traffic signs in the UK. The data is sourced from <a href="https://www.gov.uk/guidance/the-highway-code/traffic-signs" target="_blank">the Highcode Code of GOV.UK</a>, specifically their guide on traffic signs.
+Welcome to the **UK Traffic Signs REST API**! This API is built using the **Java Spring Boot Framework**, **H2** and **Swagger**, and provides a comprehensive database of traffic signs in the UK. The data is sourced from <a href="https://www.gov.uk/guidance/the-highway-code/traffic-signs" target="_blank">the Highway Code of GOV.UK</a>, specifically their guide on traffic signs.
 
 With this API, users can easily perform CRUD operations on both **categories** and **traffic signs**, and retrieve detailed information on each sign. The API is designed to be user-friendly and intuitive, with clear documentation provided by **Swagger**.
 
