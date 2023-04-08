@@ -1,8 +1,8 @@
 ## Side Project: UK Traffic Signs (Java Spring Boot REST API) 
 <a href="https://6gg9.short.gy/9iqhry" target="_blank">:arrow_right: Preview</a>  
 
-[trafficsign.mp4]()
-
+[trafficsign.mp4](https://user-images.githubusercontent.com/7412075/230746373-58fbdbce-0a4f-4d1f-94bc-68ee0dbdd8f5.mp4
+)
 
 ### Introduction 
 
@@ -305,7 +305,7 @@ The user can navigate to check the UK Traffic Signs REST API documentation at ht
 
 ### Key Takeaways
 
-1. Configuring **Template Paths** in Spring Boot
+#### 1. Configuring **Template Paths** in Spring Boot
 
 ```
 spring.thymeleaf.prefix=file:src/main/resources/templates/
@@ -318,7 +318,7 @@ Here is a short note on the differences between **file** and **classpath** of sp
 
 **spring.thymeleaf.prefix=classpath:/templates/**: This line specifies the location of the templates directory on the classpath. This means that the templates directory is bundled with the application and can be accessed regardless of the file system location. This is typically used when **deploying the application as a JAR or WAR file to a server**.
 
-2. Understanding the **Roles** and **Responsibilities** of JPA Components
+#### 2. Understanding the **Roles** and **Responsibilities** of JPA Components
 
 In the context of JPA (Java Persistence API), the following are some common functions of the different components in a typical JPA-based application:
 
